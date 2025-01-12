@@ -6,9 +6,9 @@
   <meta name="description" content="Gargets Hub - Your Tactical Gear HQ.">
   <title>Gargets Hub</title>
   <style>
-    /* General Styles */
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Roboto:wght@400;700&display=swap');
 
+    /* General Styles */
     html, body {
       font-family: 'Orbitron', sans-serif;
       margin: 0;
@@ -67,6 +67,16 @@
       color: #ffcc00;
     }
 
+    #theme-toggle {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #e6b800;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
     /* Hero Section */
     .hero {
       background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
@@ -86,7 +96,6 @@
       font-size: 2.5rem;
       margin-bottom: 1rem;
       font-weight: 600;
-      text-align: center;
     }
 
     .hero p {
@@ -202,13 +211,6 @@
       font-size: 0.9rem;
       margin-top: 1rem;
     }
-
-    /* Media Queries */
-    @media (max-width: 768px) {
-      .feature-card {
-        text-align: center;
-      }
-    }
   </style>
 </head>
 <body>
@@ -219,16 +221,16 @@
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#features">Features</a></li>
-          <li><a href="#about">About Us</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <button id="theme-toggle">Toggle Dark Mode</button>
     </div>
   </header>
   <section id="home" class="hero">
     <div class="container">
       <h2>Your Tactical Gear HQ</h2>
-      <p>Level up your arsenal with cutting-edge gadgets inspired by the battlefield. Performance meets style, only at Gargets Hub.</p>
+      <p>Explore cutting-edge gadgets with style and performance at Gargets Hub.</p>
       <a href="#features" class="btn">Explore Now</a>
     </div>
   </section>
@@ -237,15 +239,15 @@
       <h2>Top Features</h2>
       <div class="feature-card">
         <h3>Unmatched Performance</h3>
-        <p>Experience gadgets optimized for high-speed gaming and precision.</p>
+        <p>Experience optimized gadgets for high-speed performance.</p>
       </div>
       <div class="feature-card">
-        <h3>Built to Last</h3>
-        <p>Rugged designs tested for endurance in any scenario.</p>
+        <h3>Rugged Durability</h3>
+        <p>Gear built to last in any scenario.</p>
       </div>
       <div class="feature-card">
-        <h3>Advanced Technology</h3>
-        <p>Gear up with the latest tech innovations at your fingertips.</p>
+        <h3>Innovative Technology</h3>
+        <p>Stay ahead with the latest tech designs.</p>
       </div>
     </div>
   </section>
@@ -253,13 +255,18 @@
     <div class="container">
       <p>&copy; 2025 Gargets Hub. All Rights Reserved.</p>
       <div class="social-media">
-        <a href="https://twitter.com" target="_blank">T</a>
-        <a href="https://facebook.com" target="_blank">F</a>
-        <a href="https://discord.com" target="_blank">D</a>
-        <a href="https://wa.me" target="_blank">W</a>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
       </div>
       <p class="disclaimer">Content inspired by Call of Duty. Gargets Hub is not affiliated with or endorsed by Activision.</p>
     </div>
   </footer>
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
 </body>
 </html>
