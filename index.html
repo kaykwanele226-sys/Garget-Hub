@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gargets Hub - Your Tactical Gear HQ.">
+  <title>Gargets Hub</title>
+  <style>
+    /* General Styles */
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Roboto:wght@400;700&display=swap');
+
+    html, body {
+      font-family: 'Orbitron', sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: linear-gradient(to bottom right, #111, #222, #333);
+      color: #e6e6e6;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* Header */
+    header {
+      background: #1a1a1a;
+      color: #e6b800;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    header nav ul li {
+      margin: 0 1rem;
+    }
+
+    header nav ul li a {
+      color: #e6b800;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    header nav ul li a:hover {
+      text-decoration: underline;
+      color: #ffcc00;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                  url('/public/hero-image.jpg') no-repeat center center/cover;
+      color: #fff;
+      padding: 3rem 1rem;
+      text-align: center;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .hero p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      max-width: 700px;
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    .hero .btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.7rem 1.5rem;
+      background: #e6b800;
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background 0.3s ease;
+      animation: pulse 2s infinite;
+    }
+
+    .hero .btn:hover {
+      background: #ffcc00;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 10px #ffcc00;
+      }
+      50% {
+        box-shadow: 0 0 20px #ffcc00;
+      }
+      100% {
+        box-shadow: 0 0 10px #ffcc00;
+      }
+    }
+
+    /* Features Section */
+    .features {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .features h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #e6b800;
+    }
+
+    .feature-card {
+      background: #1a1a1a;
+      border: 1px solid #e6b800;
+      border-radius: 10px;
+      padding: 1rem;
+      margin: 1rem 0;
+      text-align: left;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: scale(1.05);
+      border-color: #ffcc00;
+    }
+
+    .feature-card h3 {
+      font-size: 1.5rem;
+      margin: 0;
+      color: #ffcc00;
+    }
+
+    .feature-card p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1rem;
+      color: #ddd;
+      margin-top: 0.5rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #1a1a1a;
+      color: #e6b800;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    footer .social-media {
+      margin-top: 1rem;
+    }
+
+    footer .social-media a {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 10px;
+      border: 1px solid #e6b800;
+      border-radius: 50%;
+      color: #e6b800;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    footer .social-media a:hover {
+      background: #e6b800;
+      color: #1a1a1a;
+    }
+
+    footer .disclaimer {
+      font-family: 'Roboto', sans-serif;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      .feature-card {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Gargets Hub</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section id="home" class="hero">
+    <div class="container">
+      <h2>Your Tactical Gear HQ</h2>
+      <p>Level up your arsenal with cutting-edge gadgets inspired by the battlefield. Performance meets style, only at Gargets Hub.</p>
+      <a href="#features" class="btn">Explore Now</a>
+    </div>
+  </section>
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Top Features</h2>
+      <div class="feature-card">
+        <h3>Unmatched Performance</h3>
+        <p>Experience gadgets optimized for high-speed gaming and precision.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Built to Last</h3>
+        <p>Rugged designs tested for endurance in any scenario.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Advanced Technology</h3>
+        <p>Gear up with the latest tech innovations at your fingertips.</p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Gargets Hub. All Rights Reserved.</p>
+      <div class="social-media">
+        <a href="https://twitter.com" target="_blank">T</a>
+        <a href="https://facebook.com" target="_blank">F</a>
+        <a href="https://discord.com" target="_blank">D</a>
+        <a href="https://wa.me" target="_blank">W</a>
+      </div>
+      <p class="disclaimer">Content inspired by Call of Duty. Gargets Hub is not affiliated with or endorsed by Activision.</p>
+    </div>
+  </footer>
+</body>
+</html>
